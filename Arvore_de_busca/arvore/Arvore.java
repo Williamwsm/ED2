@@ -170,7 +170,7 @@ public class Arvore implements IArvore {
         if (raiz.getDireita() == null){
             return raiz.getDado();
         }
-        return menor(raiz.getDireita());
+        return maior(raiz.getDireita());
 
 
 
