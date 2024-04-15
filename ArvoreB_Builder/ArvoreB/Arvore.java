@@ -120,7 +120,7 @@ public class Arvore {
     private void rotaEmOrdem(NoBuilder raiz) {
         if (raiz != null) {
             rotaEmOrdem(raiz.getEsquerdo());
-            System.out.println(raiz);
+            System.out.println(raiz.getElemento());
             rotaEmOrdem(raiz.getDireito());
         }
     }
@@ -133,7 +133,7 @@ public class Arvore {
         if (raiz != null) {
             rotaPosOrdem(raiz.getEsquerdo());
             rotaPosOrdem(raiz.getDireito());
-            System.out.println(raiz);
+            System.out.println(raiz.getElemento());
         }
     }
 }
