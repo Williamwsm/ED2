@@ -84,20 +84,20 @@ public class Arvore {
             } else if (raiz.getEsquerdo() == null) {
                 return raiz.getDireito();
             } else {
-                raiz.setElemento(menor(raiz.getDireito()));
-                raiz.setDireito(remover(raiz.getDireito(), raiz));
+                raiz.setElemento(maior(raiz.getEsquerdo()));
+                raiz.setEsquerdo(remover(raiz.getEsquerdo(), raiz));
             }
         }
         return raiz;
     }
 
-    private Integer menor(NoBuilder raiz) {
+    private Integer maior(NoBuilder raiz) {
         if (raiz.getElemento() == null) {
             throw new IllegalArgumentException("Elemento invalido");
-        } else if (raiz.getEsquerdo() == null) {
+        } else if (raiz.getDireito() == null) {
             return raiz.getElemento();
         }
-        return menor(raiz.getEsquerdo());
+        return maior(raiz.getDireito());
 
     }
 
